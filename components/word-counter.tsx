@@ -18,7 +18,10 @@ export default function WordCounter() {
     };
 
     const clearText = () => {
-        setText("");
+        const confirmation = confirm("Are you sure you want to clear text?");
+        if (confirmation) {
+            setText("");
+        }
     };
 
     const wordCount = text
